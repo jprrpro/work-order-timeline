@@ -1,0 +1,20 @@
+.badge {
+  width: 87px;
+  height: 22px;
+  border-radius: 5px;
+  background-color: rgba(214, 216, 255, 1);
+  color: rgba(62, 64, 219, 1);
+  font-size: 14px;
+  font-weight: 400;
+  padding: 2px 8px;
+
+  &--success {
+    background-color: rgba(225, 255, 204, 1);
+    color: rgba(8, 162, 104, 1);
+  }
+
+  &--blocked {
+    background-color: rgba(252, 238, 181, 1);
+    color: rgba(177, 54, 0, 1);
+  }
+}

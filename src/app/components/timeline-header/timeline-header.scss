@@ -1,0 +1,18 @@
+.timeline-header {
+  display: flex;
+  height: 32px;
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+.day-column {
+  min-width: 113px;
+  flex: 0 0 113px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border-right: 1px solid var(--border);
+}

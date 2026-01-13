@@ -1,0 +1,9 @@
+<div class="timeline-row" [style.height.px]="rowHeight()">
+  <!-- This is just to draw the colums and cells for add btn  -->
+  @for (column of columns(); track column) {
+    <div class="timeline-row__column">
+      <div class="timeline-row__column__cell" (click)="openCreationPanel()"></div>
+    </div>
+  }
+  <ng-content></ng-content>
+</div>

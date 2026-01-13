@@ -1,0 +1,60 @@
+// styles.scss
+@import url('https://naologic-com-assets.naologic.com/fonts/circular-std/circular-std.css');
+@import '@ng-select/ng-select/themes/default.theme.css';
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+:root {
+  --primary: #0066cc;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-600: #495057;
+  --text: #212529;
+  --border: #dee2e6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Circular-Std', system-ui, sans-serif;
+  background: var(--gray-100);
+  color: var(--text);
+}
+
+
+
+/* Modernize the Datepicker */
+ngb-datepicker {
+  border: 1px solid #dee2e6 !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: white;
+
+  .ngb-dp-header {
+    background-color: #f8f9fa;
+    padding-top: 0.5rem;
+  }
+
+  .ngb-dp-navigation-select {
+    display: flex;
+    gap: 5px;
+  }
+
+  /* Style the actual day squares */
+  .ngb-dp-day, .ngb-dp-weekday {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+
+  /* Style the selected day */
+  .btn-light.bg-primary {
+    color: white !important;
+    border-radius: 50%;
+  }
+}

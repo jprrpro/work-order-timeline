@@ -1,0 +1,24 @@
+[
+  {
+    "docId": "WO-101",
+    "docType": "workOrder",
+    "data": {
+      "name": "Frame Cut A",
+      "workCenterId": "WC-01",
+      "status": "complete",
+      "startDate": "2026-01-13T08:00:00Z",
+      "endDate": "2026-01-14T17:00:00Z"
+    }
+  },
+  {
+    "docId": "WO-102",
+    "docType": "workOrder",
+    "data": {
+      "name": "Frame Cut B",
+      "workCenterId": "WC-01",
+      "status": "in-progress",
+      "startDate": "2026-01-16T08:00:00Z",
+      "endDate": "2026-01-19T12:00:00Z"
+    }
+  }
+]

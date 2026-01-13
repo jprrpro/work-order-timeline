@@ -1,0 +1,43 @@
+.ng-select.zoom-level {
+  border: 0px;
+  min-height: 0px;
+  height: 28px;
+  border-radius: 0;
+}
+.ng-select.zoom-level .ng-select-container {
+  min-height: 0px;
+  height: 38px;
+  border-radius: 0;
+}
+
+.ng-select.zoom-level ::ng-deep .ng-select-container {
+  min-height: 0px;
+  border-radius: 0;
+  width: 71px;
+  height: 25px;
+  border-radius: 0px 5px 5px 0px;
+
+  color: rgba(62, 64, 219, 1);
+  font-family: 'Circular-Std', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  font-style: medium;
+}
+
+.zoom-level {
+  display: flex;
+
+  span {
+    height: 25px;
+    border-radius: 5px 0px 0px 5px;
+    background-color: rgba(241, 243, 248, 0.75);
+    color: rgba(62, 64, 219, 1);
+    font-family: 'Circular-Std', system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    font-style: medium;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+  }
+}

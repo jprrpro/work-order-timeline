@@ -1,0 +1,95 @@
+.wot-container {
+  max-width: 1293px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.top-bar {
+  padding: 16px 24px;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  h1 {
+    color: rgba(3, 9, 41, 1);
+    font-size: 24px;
+    font-weight: 500;
+    font-style: medium;
+  }
+}
+
+.timeline-layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  overflow: hidden;
+}
+
+.work-centers-panel {
+  background: white;
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+
+  &-header {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 31px;
+    color: rgba(104, 113, 150, 1);
+    font-size: 14px;
+    font-weight: 400;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+.timeline-container {
+  overflow-x: auto;
+  overflow-y: auto;
+  position: relative;
+  background: #fff;
+}
+
+// Context nav start
+.cdk-overlay-container {
+  > * {
+    color: rgba(62, 64, 219, 1);
+    font-family: 'Circular-Std', system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cdk-menu,
+.context-menu {
+  width: 200px;
+  min-height: 48px;
+  box-shadow: 0 0 0 1px rgba(104, 113, 150, 0.1), 0 2.5px 3px -1.5px rgba(200, 207, 233, 1),
+    0 4.5px 5px -1px rgba(216, 220, 235, 1);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 1);
+  font-family: 'Circular-Std', system-ui, sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0;
+
+  button {
+    width: 100%;
+    height: 28px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: transparent;
+    border: unset;
+    cursor: pointer;
+    padding: 0 12px;
+  }
+}

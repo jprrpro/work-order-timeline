@@ -1,0 +1,31 @@
+<div class="wot-container">
+  <header class="top-bar">
+    <h1>Work Orders</h1>
+    <wot-timeline-zoom />
+  </header>
+  <main class="timeline-layout">
+    <aside class="work-centers-panel">
+      <div class="work-centers-panel-header">Work Center</div>
+      <wot-work-center-list />
+    </aside>
+    <section class="timeline-container">
+      <wot-timeline-header />
+      <div class="timeline-body">
+        @for (wc of workCenters(); track wc) {
+        <wot-timeline-row [workCenter]="wc">
+          @for (wo of workOrders(); track wo) { 
+            @if (wc.docId === wo.data.workCenterId) {
+            <wot-order-strip
+              [style.left.px]="getOrderPosition(wo)"
+              [style.width.px]="getOrderSize(wo)"
+              [order]="wo"
+            />
+            }
+          }
+        </wot-timeline-row>
+        }
+      </div>
+    </section>
+  </main>
+</div>
+<wot-form />

@@ -1,0 +1,70 @@
+@if (isPanelOpen()) {
+<div class="form-container-wrapper">
+  <div class="form-container-backdrop" (click)="closeSidePanel()"></div>
+  <div class="form-container" [ngClass]="{ 'form-container--open': isPanelOpen }">
+    <div class="form-container__header">
+      <div class="form-container__header__title">
+        <h2>Work Order Details</h2>
+        <p>Specify the dates, name and status for this order.</p>
+      </div>
+      <div class="form-container__header__controls">
+        <button class="btn cancel-btn" (click)="closeSidePanel()">Cancel</button>
+        <button class="btn create-btn" (click)="createOrder()">Create</button>
+      </div>
+    </div>
+    <div class="form-container__body">
+      <form [formGroup]="createEditForm">
+        <div class="wot-form-field">
+          <label for="name">Work order name</label>
+          <input type="text" name="name" formControlName="name" />
+        </div>
+        <div class="wot-form-field">
+          <label for="name">Status</label>
+          <ng-select
+            class="order-status"
+            [items]="orderStatus"
+            bindLabel="label"
+            bindValue="value"
+            [clearable]="false"
+            name="name" 
+            formControlName="status"
+          >
+          </ng-select>
+        </div>
+        <div class="wot-form-field">
+          <label for="endDate">End date</label>
+          <div class="input-group">
+            <input
+              class="form-control"
+              placeholder="yyyy-mm-dd"
+              name="endDate"
+              formControlName="endDate"
+              ngbDatepicker
+              #endDateDP="ngbDatepicker"
+            />
+            <button class="btn btn-outline-primary" (click)="endDateDP.toggle()" type="button">
+              📅
+            </button>
+          </div>
+        </div>
+        <div class="wot-form-field">
+          <label for="startDate">Start date</label>
+          <div class="input-group">
+            <input
+              class="form-control"
+              placeholder="yyyy-mm-dd"
+              name="startDate"
+              formControlName="startDate"
+              ngbDatepicker
+              #startDateDP="ngbDatepicker"
+            />
+            <button class="btn btn-outline-primary" (click)="startDateDP.toggle()" type="button">
+              📅
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+}

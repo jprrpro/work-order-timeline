@@ -1,0 +1,58 @@
+:host {
+  position: absolute;
+  top: 50%;
+  margin-top: -19px;
+}
+.wot-order-strip {
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+  justify-content: space-between;
+  padding: 0 10px;
+  height: 38px;
+  box-shadow: 0 0 0 1px rgba(222, 224, 255, 1);
+  border-radius: 8px;
+  background-color: rgba(237, 238, 255, 1);
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &--success {
+    box-shadow: 0 0 0 1px rgba(209, 250, 179, 1);
+    background-color: rgba(248, 255, 243, 1);
+  }
+
+  &--blocked {
+    box-shadow: 0 0 0 1px rgba(255, 245, 207, 1);
+    background-color: rgba(255, 252, 241, 1);
+  }
+
+  > div {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    button {
+      display: inherit;
+      align-items: inherit;
+      background-color: transparent;
+      border: unset;
+      padding: 0;
+      width: 24px;
+      height: 22px;
+      border-radius: 5px;
+      margin-left: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(216, 220, 235, 1);
+      }
+    }
+  }
+}
+
+

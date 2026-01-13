@@ -1,0 +1,72 @@
+[
+  {
+    "docId": "WC-01",
+    "docType": "workCenter",
+    "data": { "name": "CNC Milling A", "dept": "Machining" }
+  },
+  {
+    "docId": "WC-02",
+    "docType": "workCenter",
+    "data": { "name": "CNC Milling B", "dept": "Machining" }
+  },
+  {
+    "docId": "WC-03",
+    "docType": "workCenter",
+    "data": { "name": "Manual Lathe", "dept": "Machining" }
+  },
+  {
+    "docId": "WC-04",
+    "docType": "workCenter",
+    "data": { "name": "Laser Cutter", "dept": "Fabrication" }
+  },
+  {
+    "docId": "WC-05",
+    "docType": "workCenter",
+    "data": { "name": "Welding Station 1", "dept": "Fabrication" }
+  },
+  {
+    "docId": "WC-06",
+    "docType": "workCenter",
+    "data": { "name": "Welding Station 2", "dept": "Fabrication" }
+  },
+  {
+    "docId": "WC-07",
+    "docType": "workCenter",
+    "data": { "name": "Surface Grinder", "dept": "Finishing" }
+  },
+  {
+    "docId": "WC-08",
+    "docType": "workCenter",
+    "data": { "name": "Industrial Oven", "dept": "Finishing" }
+  },
+  {
+    "docId": "WC-09",
+    "docType": "workCenter",
+    "data": { "name": "Paint Booth", "dept": "Finishing" }
+  },
+  {
+    "docId": "WC-10",
+    "docType": "workCenter",
+    "data": { "name": "Assembly Line 1", "dept": "Assembly" }
+  },
+  {
+    "docId": "WC-11",
+    "docType": "workCenter",
+    "data": { "name": "Assembly Line 2", "dept": "Assembly" }
+  },
+  {
+    "docId": "WC-12",
+    "docType": "workCenter",
+    "data": { "name": "Electronics Lab", "dept": "Assembly" }
+  },
+  {
+    "docId": "WC-13",
+    "docType": "workCenter",
+    "data": { "name": "QA Inspection", "dept": "Quality" }
+  },
+  {
+    "docId": "WC-14",
+    "docType": "workCenter",
+    "data": { "name": "Stress Test", "dept": "Quality" }
+  }
+]

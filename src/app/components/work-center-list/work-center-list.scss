@@ -1,0 +1,14 @@
+.work-center-list {
+  .work-center-row {
+    padding: 16px 31px;
+    height: 48px;
+    border-bottom: 1px solid var(--border);
+    color: rgba(3, 9, 41, 1);
+    font-size: 14px;
+    font-weight: 400;
+
+    &:hover {
+      background: var(--gray-100);
+    }
+  }
+}

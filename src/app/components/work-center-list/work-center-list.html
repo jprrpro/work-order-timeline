@@ -1,0 +1,8 @@
+<div class="work-center-list">
+  <!-- <pre>{{ workCenters() | json}}</pre> -->
+  @for (wc of workCenters(); track wc.docId) {
+  <div class="work-center-row">
+    {{ wc.data['name'] }}
+  </div>
+  }
+</div>
