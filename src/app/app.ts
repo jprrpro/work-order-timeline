@@ -11,6 +11,7 @@ import { TimelineService } from './services/timeline.service';
 import { TimelineZoom } from './components/timeline-zoom/timeline-zoom';
 import { DateTime } from 'luxon';
 import { WotForm } from './components/wot-form/wot-form';
+import { LocalStorage } from './services/local-storage';
 
 @Component({
   selector: 'app-root',
@@ -30,6 +31,7 @@ export class App implements OnInit {
   protected readonly title = signal('work-order-timeline');
   workCenterService = inject(WorkCenterService);
   timelineService = inject(TimelineService);
+  localStorage = inject(LocalStorage);
 
   workCenters = signal<(WorkCenter | TimelineBaseDocument)[]>([]);
   workOrders = signal<(WorkOrder | TimelineBaseDocument)[]>([]);
@@ -42,9 +44,15 @@ export class App implements OnInit {
       .getAllWorkCenters()
       .subscribe((wc) => this.workCenterService.workCenters.set(wc));
 
-    this.workCenterService
-      .getAllWorkOrders()
-      .subscribe((wo) => this.workCenterService.workOrders.set(wo));    
+
+    if (this.localStorage.exists('workOrders')) {
+      const workOrders = this.localStorage.getItem('workOrders');
+      this.workCenterService.workOrders.set(<WorkOrder[]>workOrders);
+    } else {
+      this.workCenterService
+        .getAllWorkOrders()
+        .subscribe((wo) => this.workCenterService.workOrders.set(wo)); 
+    }
   }
 
   getTimePassed(order: TimelineBaseDocument | WorkOrder, zoomLevel: ZoomLevel) {

@@ -27,7 +27,7 @@ export class WotForm implements OnInit{
 
   orderStatus = [
     { value: 'open', label: 'Open' },
-    { value: 'inProgress', label: 'In Progress' },
+    { value: 'in-progress', label: 'In Progress' },
     { value: 'completed', label: 'Completed' },
     { value: 'blocked', label: 'Blocked' },
   ];

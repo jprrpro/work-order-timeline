@@ -28,9 +28,4 @@ export class TimelineHeader implements OnInit {
   updateHeaders() {
     this.headers = this.timelineService.timelineLabels();
   }
-
-  goToToday() {
-    // Bonus: jump to today
-    this.headers = this.timelineService.getTimelineHeaders(this.zoomLevel);
-  }
 }

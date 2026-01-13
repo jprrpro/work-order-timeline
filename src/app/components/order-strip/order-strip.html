@@ -1,8 +1,8 @@
 <div
   class="wot-order-strip"
   [ngClass]="{
-    'wot-order-strip--success': false,
-    'wot-order-strip--blocked': false,
+    'wot-order-strip--success': order.data.status === 'completed',
+    'wot-order-strip--blocked': order.data.status === 'blocked',
   }"
 
   [cdkContextMenuTriggerFor]="orderMenu"
@@ -11,10 +11,10 @@
   [cdkMenuTriggerData]="{ $implicit: order }"
   (click)="$event.stopPropagation()"
 >
-  <p>CNC Machine 1</p>
+  <p>{{ order.data.name }}</p>
 
   <div>
-    <wot-badge></wot-badge>
+    <wot-badge [status]="order.data.status"></wot-badge>
     <button [cdkMenuTriggerFor]="orderMenu">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
         <title>Three Horizontal Dots</title>

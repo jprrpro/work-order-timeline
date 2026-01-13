@@ -1,5 +1,6 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { WorkOrderStatus } from '../../models/timeline';
 
 @Component({
   selector: 'wot-badge',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './badge.scss',
 })
 export class Badge {
-
+  @Input() status: WorkOrderStatus = 'in-progress';
 }
