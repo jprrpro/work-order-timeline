@@ -1,7 +1,6 @@
 .timeline-row {
   $root: &;
   position: relative;
-  background: white;
   height: 48px;
   display: flex;
 
@@ -27,8 +26,6 @@
   }
 
   &:hover {
-    
-
     #{$root}__column {
       background-color: rgba(238, 240, 255, 1);
       border-right: unset;

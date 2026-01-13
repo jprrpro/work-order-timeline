@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { ZoomLevel } from '../../models/timeline';
+import { TimelineService } from '../../services/timeline.service';
 
 @Component({
   selector: 'wot-timeline-zoom',
@@ -9,12 +11,21 @@ import { NgSelectModule } from '@ng-select/ng-select';
   styleUrl: './timeline-zoom.scss',
 })
 export class TimelineZoom {
+  timelineService = inject(TimelineService);
+
+
   zoomModes = [
     { value: 'day', label: 'Day' },
     { value: 'week', label: 'Week' },
     { value: 'month', label: 'Month' }
   ];
   
-  selectedZoomMode: string = '';
+  selectedZoomMode: string = 'day';
+
+
+  onZoomChange(newLevel: ZoomLevel) {
+    this.timelineService.currentZoom.set(newLevel);
+    this.timelineService.timelineLabels();
+  }
 
 }

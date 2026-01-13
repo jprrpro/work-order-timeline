@@ -1,5 +1,4 @@
 .wot-container {
-  max-width: 1293px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -52,7 +51,7 @@
   overflow-x: auto;
   overflow-y: auto;
   position: relative;
-  background: #fff;
+  background: rgba(247, 249, 252, 1);
 }
 
 // Context nav start

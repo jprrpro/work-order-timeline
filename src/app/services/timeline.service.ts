@@ -1,8 +1,7 @@
 import { computed, Injectable, signal } from '@angular/core';
 import { DateTime } from 'luxon';
 import { BehaviorSubject } from 'rxjs';
-
-export type ZoomLevel = 'day' | 'week' | 'month';
+import { ZoomLevel } from '../models/timeline';
 
 @Injectable({
   providedIn: 'root',

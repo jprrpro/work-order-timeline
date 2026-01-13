@@ -6,6 +6,7 @@
     bindLabel="label"
     bindValue="value"
     [(ngModel)]="selectedZoomMode"
+    (ngModelChange)="onZoomChange($event)"
     [clearable]="false"
   >
   </ng-select>

@@ -1,6 +1,5 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { TimelineService } from '../../services/timeline.service';
-import { JsonPipe } from '@angular/common';
 import { ZoomLevel } from '../../models/timeline';
 
 
@@ -13,19 +12,11 @@ import { ZoomLevel } from '../../models/timeline';
 })
 export class TimelineHeader implements OnInit {
   timelineService = inject(TimelineService);
-  zoomLevel: ZoomLevel = 'day';
+  zoomLevel = signal<ZoomLevel>('day');
   headers: string[] = [];
   
   ngOnInit(): void {
-    this.updateHeaders();
-  }
-
-  onZoomChange(newLevel: ZoomLevel) {
-    this.zoomLevel = newLevel;
-    this.updateHeaders();
-  }
-
-  updateHeaders() {
+    this.zoomLevel = this.timelineService.currentZoom;
     this.headers = this.timelineService.timelineLabels();
   }
 }

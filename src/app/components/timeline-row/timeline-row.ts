@@ -1,5 +1,5 @@
 import { Component, inject, input, OnInit, signal } from '@angular/core';
-import { TimelineService, ZoomLevel } from '../../services/timeline.service';
+import { TimelineService } from '../../services/timeline.service';
 import { SidePanelService } from '../../services/side-panel';
 import { WorkCenter } from '../../models/work-center.model';
 

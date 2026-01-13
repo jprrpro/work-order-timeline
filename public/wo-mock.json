@@ -1,24 +1,46 @@
 [
   {
-    "docId": "WO-101",
+    "docId": "6f4f3e9c-9ce7-43bd-95ac-efd882bc4ebf",
     "docType": "workOrder",
     "data": {
-      "name": "Frame Cut A",
-      "workCenterId": "WC-01",
-      "status": "complete",
-      "startDate": "2026-01-13T08:00:00Z",
-      "endDate": "2026-01-14T17:00:00Z"
+      "name": "Order 1",
+      "status": "in-progress",
+      "endDate": "2026-01-14T00:00:00.000Z",
+      "startDate": "2026-01-16T00:00:00.000Z",
+      "workCenterId": "WC-03"
     }
   },
   {
-    "docId": "WO-102",
+    "docId": "d7709f5b-640f-4831-82a2-660a8639cb5e",
     "docType": "workOrder",
     "data": {
-      "name": "Frame Cut B",
-      "workCenterId": "WC-01",
+      "name": "Order 2",
       "status": "in-progress",
-      "startDate": "2026-01-16T08:00:00Z",
-      "endDate": "2026-01-19T12:00:00Z"
+      "endDate": "2026-01-22T00:00:00.000Z",
+      "startDate": "2026-01-24T00:00:00.000Z",
+      "workCenterId": "WC-03"
+    }
+  },
+  {
+    "docId": "4a148d6f-9e52-4ad5-a528-6f0528e8d8f1",
+    "docType": "workOrder",
+    "data": {
+      "name": "Order 2",
+      "status": "completed",
+      "endDate": "2026-01-15T00:00:00.000Z",
+      "startDate": "2026-01-17T00:00:00.000Z",
+      "workCenterId": "WC-01"
+    }
+  },
+  {
+    "docId": "f6b2f62e-9bd4-460a-9208-97d865b98e89",
+    "docType": "workOrder",
+    "data": {
+      "name": "Order 3",
+      "status": "blocked",
+      "endDate": "2026-01-17T00:00:00.000Z",
+      "startDate": "2026-01-21T00:00:00.000Z",
+      "workCenterId": "WC-05"
     }
   }
 ]

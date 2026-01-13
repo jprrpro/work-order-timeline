@@ -8,6 +8,7 @@ import { NgClass } from '@angular/common';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { WorkOrder } from '../../models/work-order.model';
 import { v4 as uuidv4 } from 'uuid';
+import { TimelineService } from '../../services/timeline.service';
 
 @Component({
   selector: 'wot-form',
@@ -20,6 +21,7 @@ export class WotForm implements OnInit{
   fb = inject(FormBuilder);
   localStorage = inject(LocalStorage);
   sidePanelService = inject(SidePanelService);
+  timelineService = inject(TimelineService);
   isPanelOpen = signal(false);
 
 
@@ -59,9 +61,9 @@ export class WotForm implements OnInit{
         workCenterId
       }
     };
-    console.log(newOrder);
     const workOrders: WorkOrder[] = this.localStorage.getItem('workOrders') ?? [];
     workOrders.push(newOrder);
-    this.localStorage.setItem('workOrders', workOrders);    
+    this.localStorage.setItem('workOrders', workOrders);
+    // this.timelineService.
   }
 }
